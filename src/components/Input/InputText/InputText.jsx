@@ -1,6 +1,6 @@
 import React from "react";
 
-export const InputText = ({ value, onChange, placeholder, ...props }) => {
+const InputText = ({ value, onChange, placeholder, ...props }) => {
   return (
     <input
       type="text"
@@ -11,3 +11,5 @@ export const InputText = ({ value, onChange, placeholder, ...props }) => {
     />
   );
 };
+
+export default InputText;

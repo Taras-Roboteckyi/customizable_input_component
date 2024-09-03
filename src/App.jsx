@@ -1,4 +1,6 @@
 import * as React from "react";
+import InputControlPanel from "./components/Input/InputControlPanel/InputControlPanel";
+import InputControlPanelStories from "./components/Input/InputControlPanel/InputControlPanel.stories";
 
 /* import { Routes, Route, Navigate } from "react-router-dom";
 
@@ -24,66 +26,7 @@ const ProfilePage = CreateLazyChunk("ProfilePage", "ProfilePage/ProfilePage"); *
 export default function App() {
   return (
     <>
-      {/*  {
-        <Suspense>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route
-                index
-                element={
-                  <PublicRoute>
-                    <Suspense fallback={<AppLoader />}>
-                      <HomePage />
-                    </Suspense>
-                  </PublicRoute>
-                }
-              />
-              <Route
-                path="news"
-                element={
-                  <PublicRoute>
-                    <NewsPage />
-                  </PublicRoute>
-                }
-              />
-              <Route
-                path="login"
-                element={
-                  <PublicRoute restricted redirectTo="/profile">
-                    <Suspense fallback={<AppLoader />}>
-                      <LoginPage />
-                    </Suspense>
-                  </PublicRoute>
-                }
-              />
-
-              <Route
-                path="profile"
-                element={
-                  <PrivateRoute redirectTo="/">
-                    <Suspense fallback={<AppLoader />}>
-                      <ProfilePage />
-                    </Suspense>
-                  </PrivateRoute>
-                }
-              />
-            </Route>
-
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
-          <ToastContainer
-            position="top-right"
-            autoClose={2000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
-        </Suspense>
-      } */}
+      <InputControlPanel></InputControlPanel>
     </>
   );
 }
