@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Switch from "react-switch";
+
 import InputGroup from "../InputGroup/InputGroup";
 
 const InputControlPanel = () => {
@@ -14,6 +16,13 @@ const InputControlPanel = () => {
   const [iconAfter, setIconAfter] = useState(null);
   const [iconBefore, setIconBefore] = useState(null);
   const [shortkey, setShortkey] = useState("");
+
+  //useState чекбокса
+  const [checkedUserText, setCheckedUserText] = useState(false);
+
+  const handleChangeUserText = (nextChecked) => {
+    setCheckedUserText(nextChecked);
+  };
 
   return (
     <div>
@@ -37,6 +46,18 @@ const InputControlPanel = () => {
             <option value="error">Error</option>
             <option value="success">Success</option>
           </select>
+        </label>
+
+        <label>
+          User text:
+          <Switch
+            checked={checkedUserText}
+            onChange={handleChangeUserText}
+            offColor="#888"
+            onColor="#00bfff"
+            checkedIcon={false}
+            uncheckedIcon={false}
+          />
         </label>
 
         <label>
