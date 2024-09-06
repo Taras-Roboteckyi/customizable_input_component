@@ -73,10 +73,13 @@ const InputControlPanel = () => {
 
         <label>
           Border:
-          <input
-            type="checkbox"
+          <Switch
             checked={border}
             onChange={() => setBorder(!border)}
+            offColor="#888"
+            onColor="#00bfff"
+            checkedIcon={false}
+            uncheckedIcon={false}
           />
         </label>
 
