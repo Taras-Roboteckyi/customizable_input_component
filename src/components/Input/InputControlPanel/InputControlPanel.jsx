@@ -7,8 +7,8 @@ const InputControlPanel = () => {
   const [labelSize, setLabelSize] = useState("sm");
   const [state, setState] = useState("default");
   const [labelPosition, setLabelPosition] = useState("top");
-  const [border, setBorder] = useState(false);
-  const [helperText, setHelperText] = useState(false);
+  const [border, setBorder] = useState(true);
+  const [helperText, setHelperText] = useState("");
   const [label, setLabel] = useState("Email");
   const [info, setInfo] = useState("");
   const [size, setSize] = useState("sm");
@@ -22,10 +22,6 @@ const InputControlPanel = () => {
 
   const handleChangeUserText = (nextChecked) => {
     setCheckedUserText(nextChecked);
-  };
-
-  const handleChangeBorder = (nextChecked) => {
-    setBorder(nextChecked);
   };
 
   return (
@@ -79,7 +75,7 @@ const InputControlPanel = () => {
           Border:
           <Switch
             checked={border}
-            onChange={handleChangeBorder}
+            onChange={() => setBorder(!border)}
             offColor="#888"
             onColor="#00bfff"
             checkedIcon={false}
@@ -87,17 +83,22 @@ const InputControlPanel = () => {
           />
         </label>
 
-        {/*  <label>
+        <label>
           Helper text:
+          <input
+            type="text"
+            value={helperText}
+            onChange={(e) => setHelperText(e.target.value)}
+          />
           <Switch
             checked={helperText}
-            onChange={() => setHelperText(!helperText)}
+            onChange={(e) => setHelperText(e.target.value)}
             offColor="#888"
             onColor="#00bfff"
             checkedIcon={false}
             uncheckedIcon={false}
           />
-        </label> */}
+        </label>
 
         <label>
           Label:
@@ -179,6 +180,7 @@ const InputControlPanel = () => {
         iconBefore={iconBefore}
         iconAfter={iconAfter}
         shortkey={shortkey}
+        userText={checkedUserText}
       />
     </div>
   );

@@ -16,12 +16,13 @@ const InputGroup = ({
   iconBefore = null,
   iconAfter = null,
   shortkey = "",
+  userText = false,
   ...props
 }) => {
   const labelClass = `input-label ${labelSize}`;
   const inputClass = `input-text ${size} ${state} ${alignment}`;
   const inputWrapperClass = `input-wrapper ${border ? "bordered" : ""}`;
-
+  console.log(userText);
   return (
     <div
       className={inputWrapperClass}
