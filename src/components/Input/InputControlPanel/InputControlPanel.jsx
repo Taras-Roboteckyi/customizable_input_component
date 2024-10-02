@@ -9,7 +9,7 @@ const InputControlPanel = () => {
   const [labelPosition, setLabelPosition] = useState("top");
   const [border, setBorder] = useState(false);
   const [helperText, setHelperText] = useState(false);
-  const [label, setLabel] = useState("Email");
+  const [label, setLabel] = useState(false);
   const [info, setInfo] = useState("");
   const [size, setSize] = useState("sm");
   const [alignment, setAlignment] = useState("left");
@@ -97,10 +97,13 @@ const InputControlPanel = () => {
 
         <label>
           Label:
-          <input
-            type="text"
-            value={label}
-            onChange={(e) => setLabel(e.target.value)}
+          <Switch
+            checked={label}
+            onChange={() => setLabel(!label)}
+            offColor="#888"
+            onColor="#00bfff"
+            checkedIcon={false}
+            uncheckedIcon={false}
           />
         </label>
 
