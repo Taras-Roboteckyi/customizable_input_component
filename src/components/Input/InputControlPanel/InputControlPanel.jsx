@@ -10,7 +10,7 @@ const InputControlPanel = () => {
   const [border, setBorder] = useState(false);
   const [helperText, setHelperText] = useState(false);
   const [label, setLabel] = useState(false);
-  const [info, setInfo] = useState("");
+  const [info, setInfo] = useState(false);
   const [size, setSize] = useState("sm");
   const [alignment, setAlignment] = useState("left");
   const [iconAfter, setIconAfter] = useState(null);
@@ -109,10 +109,13 @@ const InputControlPanel = () => {
 
         <label>
           Info:
-          <input
-            type="text"
-            value={info}
-            onChange={(e) => setInfo(e.target.value)}
+          <Switch
+            checked={info}
+            onChange={() => setInfo(!info)}
+            offColor="#888"
+            onColor="#00bfff"
+            checkedIcon={false}
+            uncheckedIcon={false}
           />
         </label>
 
