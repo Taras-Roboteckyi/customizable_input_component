@@ -16,8 +16,6 @@ const InputControlPanel = () => {
   const [iconAfter, setIconAfter] = useState(null);
   const [iconBefore, setIconBefore] = useState(null);
   const [shortkey, setShortkey] = useState("");
-
-  //useState чекбокса
   const [checkedUserText, setCheckedUserText] = useState(false);
 
   const handleChangeUserText = (nextChecked) => {

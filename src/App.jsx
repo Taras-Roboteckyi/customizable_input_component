@@ -1,7 +1,7 @@
 import * as React from "react";
 import InputControlPanel from "./components/Input/InputControlPanel/InputControlPanel";
 //import InputControlPanelStories from "./components/Input/InputControlPanel/InputControlPanel.stories";
-import InputGroup from "./components/Input/InputGroup/InputGroup";
+//import InputGroup from "./components/Input/InputGroup/InputGroup";
 
 /* import { Routes, Route, Navigate } from "react-router-dom";
 
@@ -28,7 +28,6 @@ export default function App() {
   return (
     <>
       <InputControlPanel></InputControlPanel>
-      <InputGroup />
     </>
   );
 }
