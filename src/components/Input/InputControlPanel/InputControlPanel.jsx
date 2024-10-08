@@ -13,6 +13,7 @@ const InputControlPanel = () => {
   const [info, setInfo] = useState(false);
   const [size, setSize] = useState("sm");
   const [alignment, setAlignment] = useState("left");
+  const [borderTwo, setBorderTwo] = useState(false);
   const [iconAfter, setIconAfter] = useState(null);
   const [iconBefore, setIconBefore] = useState(null);
   const [shortkey, setShortkey] = useState("");
@@ -136,6 +137,18 @@ const InputControlPanel = () => {
             <option value="center">Center</option>
             <option value="right">Right</option>
           </select>
+        </label>
+
+        <label>
+          Border:
+          <Switch
+            checked={borderTwo}
+            onChange={() => setBorderTwo(!borderTwo)}
+            offColor="#888"
+            onColor="#00bfff"
+            checkedIcon={false}
+            uncheckedIcon={false}
+          />
         </label>
 
         <label>
