@@ -165,10 +165,13 @@ const InputControlPanel = () => {
 
         <label>
           Icon before:
-          <input
-            type="text"
-            value={iconBefore}
-            onChange={(e) => setIconBefore(e.target.value)}
+          <Switch
+            checked={iconBefore}
+            onChange={() => setIconBefore(!iconBefore)}
+            offColor="#888"
+            onColor="#00bfff"
+            checkedIcon={false}
+            uncheckedIcon={false}
           />
         </label>
 
