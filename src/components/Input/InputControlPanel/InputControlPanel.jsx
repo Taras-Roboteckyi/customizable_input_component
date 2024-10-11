@@ -16,7 +16,7 @@ const InputControlPanel = () => {
   const [borderTwo, setBorderTwo] = useState(false);
   const [iconAfter, setIconAfter] = useState(null);
   const [iconBefore, setIconBefore] = useState(null);
-  const [shortkey, setShortkey] = useState("");
+  const [shortKey, setShortkey] = useState("");
   const [checkedUserText, setCheckedUserText] = useState(false);
 
   const handleChangeUserText = (nextChecked) => {
@@ -177,10 +177,13 @@ const InputControlPanel = () => {
 
         <label>
           Shortkey:
-          <input
-            type="text"
-            value={shortkey}
-            onChange={(e) => setShortkey(e.target.value)}
+          <Switch
+            checked={shortKey}
+            onChange={() => setShortkey(!shortKey)}
+            offColor="#888"
+            onColor="#00bfff"
+            checkedIcon={false}
+            uncheckedIcon={false}
           />
         </label>
       </div>
@@ -197,7 +200,7 @@ const InputControlPanel = () => {
         alignment={alignment}
         iconBefore={iconBefore}
         iconAfter={iconAfter}
-        shortkey={shortkey}
+        shortkey={shortKey}
         userText={checkedUserText}
       />
     </div>
