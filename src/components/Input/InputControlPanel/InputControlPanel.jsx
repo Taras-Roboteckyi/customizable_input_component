@@ -18,106 +18,117 @@ const InputControlPanel = () => {
   const [iconBefore, setIconBefore] = useState(null);
   const [shortKey, setShortkey] = useState("");
   const [checkedUserText, setCheckedUserText] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); //Випадаюче меню
 
   const handleChangeUserText = (nextChecked) => {
     setCheckedUserText(nextChecked);
   };
 
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
-      <div className="control-panel">
-        <label>
-          Label size:
-          <select
-            value={labelSize}
-            onChange={(e) => setLabelSize(e.target.value)}
-          >
-            <option value="sm">Small</option>
-            <option value="md">Medium</option>
-            <option value="lg">Large</option>
-          </select>
-        </label>
+      <button onClick={toggleDropdown}>
+        {isOpen ? "Close settings" : "Open settings"}
+      </button>
+      {isOpen && (
+        <div className="dropdown-content">
+          <label>
+            Label size:
+            <select
+              value={labelSize}
+              onChange={(e) => setLabelSize(e.target.value)}
+            >
+              <option value="sm">Small</option>
+              <option value="md">Medium</option>
+              <option value="lg">Large</option>
+            </select>
+          </label>
 
-        <label>
-          State:
-          <select value={state} onChange={(e) => setState(e.target.value)}>
-            <option value="default">Default</option>
-            <option value="error">Error</option>
-            <option value="success">Success</option>
-          </select>
-        </label>
+          <label>
+            State:
+            <select value={state} onChange={(e) => setState(e.target.value)}>
+              <option value="default">Default</option>
+              <option value="error">Error</option>
+              <option value="success">Success</option>
+            </select>
+          </label>
 
-        <label>
-          User text:
-          <Switch
-            checked={checkedUserText}
-            onChange={handleChangeUserText}
-            offColor="#888"
-            onColor="#00bfff"
-            checkedIcon={false}
-            uncheckedIcon={false}
-          />
-        </label>
+          <label>
+            User text:
+            <Switch
+              checked={checkedUserText}
+              onChange={handleChangeUserText}
+              offColor="#888"
+              onColor="#00bfff"
+              checkedIcon={false}
+              uncheckedIcon={false}
+            />
+          </label>
 
-        <label>
-          Label position:
-          <select
-            value={labelPosition}
-            onChange={(e) => setLabelPosition(e.target.value)}
-          >
-            <option value="top">Top</option>
-            <option value="left">Left</option>
-          </select>
-        </label>
+          <label>
+            Label position:
+            <select
+              value={labelPosition}
+              onChange={(e) => setLabelPosition(e.target.value)}
+            >
+              <option value="top">Top</option>
+              <option value="left">Left</option>
+            </select>
+          </label>
 
-        <label>
-          Border:
-          <Switch
-            checked={border}
-            onChange={() => setBorder(!border)}
-            offColor="#888"
-            onColor="#00bfff"
-            checkedIcon={false}
-            uncheckedIcon={false}
-          />
-        </label>
+          <label>
+            Border:
+            <Switch
+              checked={border}
+              onChange={() => setBorder(!border)}
+              offColor="#888"
+              onColor="#00bfff"
+              checkedIcon={false}
+              uncheckedIcon={false}
+            />
+          </label>
 
-        <label>
-          Helper text:
-          <Switch
-            checked={helperText}
-            onChange={() => setHelperText(!helperText)}
-            offColor="#888"
-            onColor="#00bfff"
-            checkedIcon={false}
-            uncheckedIcon={false}
-          />
-        </label>
+          <label>
+            Helper text:
+            <Switch
+              checked={helperText}
+              onChange={() => setHelperText(!helperText)}
+              offColor="#888"
+              onColor="#00bfff"
+              checkedIcon={false}
+              uncheckedIcon={false}
+            />
+          </label>
 
-        <label>
-          Label:
-          <Switch
-            checked={label}
-            onChange={() => setLabel(!label)}
-            offColor="#888"
-            onColor="#00bfff"
-            checkedIcon={false}
-            uncheckedIcon={false}
-          />
-        </label>
+          <label>
+            Label:
+            <Switch
+              checked={label}
+              onChange={() => setLabel(!label)}
+              offColor="#888"
+              onColor="#00bfff"
+              checkedIcon={false}
+              uncheckedIcon={false}
+            />
+          </label>
 
-        <label>
-          Info:
-          <Switch
-            checked={info}
-            onChange={() => setInfo(!info)}
-            offColor="#888"
-            onColor="#00bfff"
-            checkedIcon={false}
-            uncheckedIcon={false}
-          />
-        </label>
-
+          <label>
+            Info:
+            <Switch
+              checked={info}
+              onChange={() => setInfo(!info)}
+              offColor="#888"
+              onColor="#00bfff"
+              checkedIcon={false}
+              uncheckedIcon={false}
+            />
+          </label>
+        </div>
+      )}
+      <div>
         <label>
           Size:
           <select value={size} onChange={(e) => setSize(e.target.value)}>
