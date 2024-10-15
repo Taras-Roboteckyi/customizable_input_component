@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Switch from "react-switch";
 
 import InputGroup from "../InputGroup/InputGroup";
+import { Select } from "../Select/Select";
 
 const InputControlPanel = () => {
-  const [labelSize, setLabelSize] = useState("sm");
+  const [labelSize, setLabelSize] = useState("Small");
   const [state, setState] = useState("default");
   const [labelPosition, setLabelPosition] = useState("top");
   const [border, setBorder] = useState(false);
@@ -28,6 +29,10 @@ const InputControlPanel = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleSelectChange = (event) => {
+    setLabelSize(event.target.value); // Обробка зміни
+  };
+
   return (
     <div>
       <button onClick={toggleDropdown}>
@@ -35,7 +40,12 @@ const InputControlPanel = () => {
       </button>
       {isOpen && (
         <div className="dropdown-content">
-          <label>
+          <Select
+            value={labelSize}
+            onChange={handleSelectChange}
+            option={{ first: "Small", second: "Medium", third: "Large" }}
+          />
+          {/*  <label>
             Label size:
             <select
               value={labelSize}
@@ -45,7 +55,7 @@ const InputControlPanel = () => {
               <option value="md">Medium</option>
               <option value="lg">Large</option>
             </select>
-          </label>
+          </label> */}
 
           <label>
             State:
