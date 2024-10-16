@@ -6,7 +6,7 @@ import { Select } from "../Select/Select";
 
 const InputControlPanel = () => {
   const [labelSize, setLabelSize] = useState("Small");
-  const [state, setState] = useState("default");
+  const [state, setState] = useState("Default");
   const [labelPosition, setLabelPosition] = useState("top");
   const [border, setBorder] = useState(false);
   const [helperText, setHelperText] = useState(false);
@@ -29,8 +29,12 @@ const InputControlPanel = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleSelectChange = (event) => {
+  const handleSelectLabelSizeChange = (event) => {
     setLabelSize(event.target.value); // Обробка зміни
+  };
+
+  const handleSelectStateChange = (event) => {
+    setState(event.target.value); // Обробка зміни select
   };
 
   return (
@@ -42,29 +46,23 @@ const InputControlPanel = () => {
         <div className="dropdown-content">
           <Select
             value={labelSize}
-            onChange={handleSelectChange}
+            onChange={handleSelectLabelSizeChange}
             option={{ first: "Small", second: "Medium", third: "Large" }}
           />
-          {/*  <label>
-            Label size:
-            <select
-              value={labelSize}
-              onChange={(e) => setLabelSize(e.target.value)}
-            >
-              <option value="sm">Small</option>
-              <option value="md">Medium</option>
-              <option value="lg">Large</option>
-            </select>
-          </label> */}
 
-          <label>
+          <Select
+            value={state}
+            onChange={handleSelectStateChange}
+            option={{ first: "Default", second: "Error", third: "Success" }}
+          />
+          {/* <label>
             State:
             <select value={state} onChange={(e) => setState(e.target.value)}>
               <option value="default">Default</option>
               <option value="error">Error</option>
               <option value="success">Success</option>
             </select>
-          </label>
+          </label> */}
 
           <label>
             User text:

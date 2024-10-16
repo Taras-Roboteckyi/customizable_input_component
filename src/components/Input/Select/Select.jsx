@@ -1,8 +1,6 @@
 export const Select = ({ value, onChange, option }) => {
   const { first, second, third } = option;
-  console.log("value", value);
-  console.log("option", option);
-  console.log("onChange", onChange);
+
   return (
     <label>
       Label size:
