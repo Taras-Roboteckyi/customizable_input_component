@@ -3,6 +3,7 @@ import Switch from "react-switch";
 
 import InputGroup from "../InputGroup/InputGroup";
 import { Select } from "../Select/Select";
+import { Checkbox } from "../Checkbox/Checkbox";
 
 const InputControlPanel = () => {
   const [labelSize, setLabelSize] = useState("Small");
@@ -49,32 +50,16 @@ const InputControlPanel = () => {
             onChange={handleSelectLabelSizeChange}
             option={{ first: "Small", second: "Medium", third: "Large" }}
           />
-
           <Select
             value={state}
             onChange={handleSelectStateChange}
             option={{ first: "Default", second: "Error", third: "Success" }}
           />
-          {/* <label>
-            State:
-            <select value={state} onChange={(e) => setState(e.target.value)}>
-              <option value="default">Default</option>
-              <option value="error">Error</option>
-              <option value="success">Success</option>
-            </select>
-          </label> */}
-
-          <label>
-            User text:
-            <Switch
-              checked={checkedUserText}
-              onChange={handleChangeUserText}
-              offColor="#888"
-              onColor="#00bfff"
-              checkedIcon={false}
-              uncheckedIcon={false}
-            />
-          </label>
+          <Checkbox
+            text="User text:"
+            checked={checkedUserText}
+            onChange={handleChangeUserText}
+          />
 
           <label>
             Label position:
@@ -86,7 +71,6 @@ const InputControlPanel = () => {
               <option value="left">Left</option>
             </select>
           </label>
-
           <label>
             Border:
             <Switch
@@ -98,7 +82,6 @@ const InputControlPanel = () => {
               uncheckedIcon={false}
             />
           </label>
-
           <label>
             Helper text:
             <Switch
@@ -110,7 +93,6 @@ const InputControlPanel = () => {
               uncheckedIcon={false}
             />
           </label>
-
           <label>
             Label:
             <Switch
@@ -122,7 +104,6 @@ const InputControlPanel = () => {
               uncheckedIcon={false}
             />
           </label>
-
           <label>
             Info:
             <Switch
