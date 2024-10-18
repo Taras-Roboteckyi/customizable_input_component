@@ -8,7 +8,7 @@ import { Checkbox } from "../Checkbox/Checkbox";
 const InputControlPanel = () => {
   const [labelSize, setLabelSize] = useState("Small");
   const [state, setState] = useState("Default");
-  const [labelPosition, setLabelPosition] = useState("top");
+  const [labelPosition, setLabelPosition] = useState("Top");
   const [border, setBorder] = useState(false);
   const [helperText, setHelperText] = useState(false);
   const [label, setLabel] = useState(false);
@@ -38,6 +38,10 @@ const InputControlPanel = () => {
     setState(event.target.value); // Обробка зміни select
   };
 
+  const handleSelectLabelPosition = (event) => {
+    setLabelPosition(event.target.value); // Обробка зміни select
+  };
+
   return (
     <div>
       <button onClick={toggleDropdown}>
@@ -49,11 +53,13 @@ const InputControlPanel = () => {
             value={labelSize}
             onChange={handleSelectLabelSizeChange}
             option={{ first: "Small", second: "Medium", third: "Large" }}
+            text="Label size"
           />
           <Select
             value={state}
             onChange={handleSelectStateChange}
             option={{ first: "Default", second: "Error", third: "Success" }}
+            text="State"
           />
           <Checkbox
             text="User text:"
@@ -61,7 +67,13 @@ const InputControlPanel = () => {
             onChange={handleChangeUserText}
           />
 
-          <label>
+          <Select
+            value={labelPosition}
+            onChange={handleSelectLabelPosition}
+            option={{ first: "Top", second: "Left" }}
+            text="Label position"
+          />
+          {/* <label>
             Label position:
             <select
               value={labelPosition}
@@ -70,7 +82,7 @@ const InputControlPanel = () => {
               <option value="top">Top</option>
               <option value="left">Left</option>
             </select>
-          </label>
+          </label> */}
           <label>
             Border:
             <Switch

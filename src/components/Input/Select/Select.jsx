@@ -1,13 +1,13 @@
-export const Select = ({ value, onChange, option }) => {
+export const Select = ({ value, onChange, option, text }) => {
   const { first, second, third } = option;
 
   return (
     <label>
-      Label size:
+      {text}:
       <select value={value} onChange={onChange}>
         <option value={first}>{first}</option>
         <option value={second}>{second}</option>
-        <option value={third}>{third}</option>
+        {third && <option value={third}>{third}</option>}
       </select>
     </label>
   );
