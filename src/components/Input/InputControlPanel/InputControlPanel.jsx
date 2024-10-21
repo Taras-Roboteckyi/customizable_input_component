@@ -73,17 +73,13 @@ const InputControlPanel = () => {
             option={{ first: "Top", second: "Left" }}
             text="Label position"
           />
+
+          <Checkbox
+            text="Border:"
+            checked={border}
+            onChange={() => setBorder(!border)}
+          />
           {/* <label>
-            Label position:
-            <select
-              value={labelPosition}
-              onChange={(e) => setLabelPosition(e.target.value)}
-            >
-              <option value="top">Top</option>
-              <option value="left">Left</option>
-            </select>
-          </label> */}
-          <label>
             Border:
             <Switch
               checked={border}
@@ -93,7 +89,7 @@ const InputControlPanel = () => {
               checkedIcon={false}
               uncheckedIcon={false}
             />
-          </label>
+          </label> */}
           <label>
             Helper text:
             <Switch
