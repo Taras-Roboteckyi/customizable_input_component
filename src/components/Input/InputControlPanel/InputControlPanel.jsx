@@ -85,18 +85,13 @@ const InputControlPanel = () => {
             checked={helperText}
             onChange={() => setHelperText(!helperText)}
           />
-          {/*   <label>
-            Helper text:
-            <Switch
-              checked={helperText}
-              onChange={() => setHelperText(!helperText)}
-              offColor="#888"
-              onColor="#00bfff"
-              checkedIcon={false}
-              uncheckedIcon={false}
-            />
-          </label> */}
-          <label>
+
+          <Checkbox
+            text="Label:"
+            checked={label}
+            onChange={() => setLabel(!label)}
+          />
+          {/*  <label>
             Label:
             <Switch
               checked={label}
@@ -106,8 +101,13 @@ const InputControlPanel = () => {
               checkedIcon={false}
               uncheckedIcon={false}
             />
-          </label>
-          <label>
+          </label> */}
+          <Checkbox
+            text="Info:"
+            checked={info}
+            onChange={() => setInfo(!info)}
+          />
+          {/*  <label>
             Info:
             <Switch
               checked={info}
@@ -117,7 +117,7 @@ const InputControlPanel = () => {
               checkedIcon={false}
               uncheckedIcon={false}
             />
-          </label>
+          </label> */}
         </div>
       )}
       <div>
