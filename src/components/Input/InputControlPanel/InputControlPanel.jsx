@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import Switch from "react-switch";
+import { GoChevronDown, GoChevronUp } from "react-icons/go";
+import { TfiLayoutGrid4 } from "react-icons/tfi";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { BsThreeDots } from "react-icons/bs";
 
 import InputGroup from "../InputGroup/InputGroup";
 import { Select } from "../Select/Select";
@@ -44,9 +48,17 @@ const InputControlPanel = () => {
 
   return (
     <div>
-      <button onClick={toggleDropdown}>
-        {isOpen ? "Close settings" : "Open settings"}
-      </button>
+      <div>
+        <p>Input</p>
+        <div onClick={toggleDropdown}>
+          {isOpen ? <GoChevronDown /> : <GoChevronUp />}
+        </div>
+        <div>
+          <TfiLayoutGrid4 />
+          <FaArrowUpRightFromSquare />
+          <BsThreeDots />
+        </div>
+      </div>
       {isOpen && (
         <div className="dropdown-content">
           <Select
@@ -91,33 +103,12 @@ const InputControlPanel = () => {
             checked={label}
             onChange={() => setLabel(!label)}
           />
-          {/*  <label>
-            Label:
-            <Switch
-              checked={label}
-              onChange={() => setLabel(!label)}
-              offColor="#888"
-              onColor="#00bfff"
-              checkedIcon={false}
-              uncheckedIcon={false}
-            />
-          </label> */}
+
           <Checkbox
             text="Info:"
             checked={info}
             onChange={() => setInfo(!info)}
           />
-          {/*  <label>
-            Info:
-            <Switch
-              checked={info}
-              onChange={() => setInfo(!info)}
-              offColor="#888"
-              onColor="#00bfff"
-              checkedIcon={false}
-              uncheckedIcon={false}
-            />
-          </label> */}
         </div>
       )}
       <div>
