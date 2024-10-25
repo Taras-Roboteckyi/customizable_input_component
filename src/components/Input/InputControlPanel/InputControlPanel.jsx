@@ -109,78 +109,83 @@ const InputControlPanel = () => {
             checked={info}
             onChange={() => setInfo(!info)}
           />
+
+          <div>
+            <div>
+              <GoChevronDown />
+              <p>_base_input</p>
+            </div>
+            <label>
+              Size:
+              <select value={size} onChange={(e) => setSize(e.target.value)}>
+                <option value="sm">Small</option>
+                <option value="md">Medium</option>
+                <option value="lg">Large</option>
+              </select>
+            </label>
+
+            <label>
+              Alignment:
+              <select
+                value={alignment}
+                onChange={(e) => setAlignment(e.target.value)}
+              >
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>
+              </select>
+            </label>
+
+            <label>
+              Border:
+              <Switch
+                checked={borderTwo}
+                onChange={() => setBorderTwo(!borderTwo)}
+                offColor="#888"
+                onColor="#00bfff"
+                checkedIcon={false}
+                uncheckedIcon={false}
+              />
+            </label>
+
+            <label>
+              Icon after:
+              <Switch
+                checked={iconAfter}
+                onChange={() => setIconAfter(!iconAfter)}
+                offColor="#888"
+                onColor="#00bfff"
+                checkedIcon={false}
+                uncheckedIcon={false}
+              />
+            </label>
+
+            <label>
+              Icon before:
+              <Switch
+                checked={iconBefore}
+                onChange={() => setIconBefore(!iconBefore)}
+                offColor="#888"
+                onColor="#00bfff"
+                checkedIcon={false}
+                uncheckedIcon={false}
+              />
+            </label>
+
+            <label>
+              Shortkey:
+              <Switch
+                checked={shortKey}
+                onChange={() => setShortkey(!shortKey)}
+                offColor="#888"
+                onColor="#00bfff"
+                checkedIcon={false}
+                uncheckedIcon={false}
+              />
+            </label>
+          </div>
         </div>
       )}
-      <div>
-        <label>
-          Size:
-          <select value={size} onChange={(e) => setSize(e.target.value)}>
-            <option value="sm">Small</option>
-            <option value="md">Medium</option>
-            <option value="lg">Large</option>
-          </select>
-        </label>
-
-        <label>
-          Alignment:
-          <select
-            value={alignment}
-            onChange={(e) => setAlignment(e.target.value)}
-          >
-            <option value="left">Left</option>
-            <option value="center">Center</option>
-            <option value="right">Right</option>
-          </select>
-        </label>
-
-        <label>
-          Border:
-          <Switch
-            checked={borderTwo}
-            onChange={() => setBorderTwo(!borderTwo)}
-            offColor="#888"
-            onColor="#00bfff"
-            checkedIcon={false}
-            uncheckedIcon={false}
-          />
-        </label>
-
-        <label>
-          Icon after:
-          <Switch
-            checked={iconAfter}
-            onChange={() => setIconAfter(!iconAfter)}
-            offColor="#888"
-            onColor="#00bfff"
-            checkedIcon={false}
-            uncheckedIcon={false}
-          />
-        </label>
-
-        <label>
-          Icon before:
-          <Switch
-            checked={iconBefore}
-            onChange={() => setIconBefore(!iconBefore)}
-            offColor="#888"
-            onColor="#00bfff"
-            checkedIcon={false}
-            uncheckedIcon={false}
-          />
-        </label>
-
-        <label>
-          Shortkey:
-          <Switch
-            checked={shortKey}
-            onChange={() => setShortkey(!shortKey)}
-            offColor="#888"
-            onColor="#00bfff"
-            checkedIcon={false}
-            uncheckedIcon={false}
-          />
-        </label>
-      </div>
 
       <InputGroup
         label={label}
