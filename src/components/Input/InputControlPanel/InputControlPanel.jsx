@@ -17,7 +17,7 @@ const InputControlPanel = () => {
   const [helperText, setHelperText] = useState(false);
   const [label, setLabel] = useState(false);
   const [info, setInfo] = useState(false);
-  const [size, setSize] = useState("sm");
+  const [size, setSize] = useState("Small");
   const [alignment, setAlignment] = useState("left");
   const [borderTwo, setBorderTwo] = useState(false);
   const [iconAfter, setIconAfter] = useState(null);
@@ -115,6 +115,12 @@ const InputControlPanel = () => {
               <GoChevronDown />
               <p>_base_input</p>
             </div>
+            <Select
+              value={size}
+              onChange={(e) => setSize(e.target.value)}
+              option={{ first: "Small", second: "Medium", third: "Large" }}
+              text="Size"
+            />
             <label>
               Size:
               <select value={size} onChange={(e) => setSize(e.target.value)}>
