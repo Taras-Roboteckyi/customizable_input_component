@@ -18,7 +18,7 @@ const InputControlPanel = () => {
   const [label, setLabel] = useState(false);
   const [info, setInfo] = useState(false);
   const [size, setSize] = useState("Small");
-  const [alignment, setAlignment] = useState("left");
+  const [alignment, setAlignment] = useState("Left");
   const [borderTwo, setBorderTwo] = useState(false);
   const [iconAfter, setIconAfter] = useState(null);
   const [iconBefore, setIconBefore] = useState(null);
@@ -121,26 +121,13 @@ const InputControlPanel = () => {
               option={{ first: "Small", second: "Medium", third: "Large" }}
               text="Size"
             />
-            <label>
-              Size:
-              <select value={size} onChange={(e) => setSize(e.target.value)}>
-                <option value="sm">Small</option>
-                <option value="md">Medium</option>
-                <option value="lg">Large</option>
-              </select>
-            </label>
 
-            <label>
-              Alignment:
-              <select
-                value={alignment}
-                onChange={(e) => setAlignment(e.target.value)}
-              >
-                <option value="left">Left</option>
-                <option value="center">Center</option>
-                <option value="right">Right</option>
-              </select>
-            </label>
+            <Select
+              value={alignment}
+              onChange={(e) => setAlignment(e.target.value)}
+              option={{ first: "Left", second: "Center", third: "Right" }}
+              text="Alignment"
+            />
 
             <label>
               Border:
