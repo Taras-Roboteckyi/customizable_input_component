@@ -129,17 +129,11 @@ const InputControlPanel = () => {
               text="Alignment"
             />
 
-            <label>
-              Border:
-              <Switch
-                checked={borderTwo}
-                onChange={() => setBorderTwo(!borderTwo)}
-                offColor="#888"
-                onColor="#00bfff"
-                checkedIcon={false}
-                uncheckedIcon={false}
-              />
-            </label>
+            <Checkbox
+              text="Border:"
+              checked={borderTwo}
+              onChange={() => setBorderTwo(!borderTwo)}
+            />
 
             <label>
               Icon after:
