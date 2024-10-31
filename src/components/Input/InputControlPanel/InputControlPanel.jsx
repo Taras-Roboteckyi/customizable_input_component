@@ -51,7 +51,7 @@ const InputControlPanel = () => {
       <div>
         <p>Input</p>
         <div onClick={toggleDropdown}>
-          {isOpen ? <GoChevronDown /> : <GoChevronUp />}
+          {isOpen ? <GoChevronUp /> : <GoChevronDown />}
         </div>
         <div>
           <TfiLayoutGrid4 />
@@ -86,11 +86,11 @@ const InputControlPanel = () => {
             text="Label position"
           />
 
-          <Checkbox
+          {/* <Checkbox
             text="Border:"
             checked={border}
             onChange={() => setBorder(!border)}
-          />
+          /> */}
 
           <Checkbox
             text="Helper text:"
@@ -135,17 +135,11 @@ const InputControlPanel = () => {
               onChange={() => setBorderTwo(!borderTwo)}
             />
 
-            <label>
-              Icon after:
-              <Switch
-                checked={iconAfter}
-                onChange={() => setIconAfter(!iconAfter)}
-                offColor="#888"
-                onColor="#00bfff"
-                checkedIcon={false}
-                uncheckedIcon={false}
-              />
-            </label>
+            <Checkbox
+              text="Icon after:"
+              checked={iconAfter}
+              onChange={() => setIconAfter(!iconAfter)}
+            />
 
             <label>
               Icon before:
