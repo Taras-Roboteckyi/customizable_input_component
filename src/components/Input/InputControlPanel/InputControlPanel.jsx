@@ -19,12 +19,12 @@ const InputControlPanel = () => {
   const [info, setInfo] = useState(false);
   const [size, setSize] = useState("Small");
   const [alignment, setAlignment] = useState("Left");
-  const [borderTwo, setBorderTwo] = useState(false);
+  /* const [borderTwo, setBorderTwo] = useState(false); */
   const [iconAfter, setIconAfter] = useState(null);
   const [iconBefore, setIconBefore] = useState(null);
   const [shortKey, setShortkey] = useState("");
   const [checkedUserText, setCheckedUserText] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); //Випадаюче меню
+  const [isOpen, setIsOpen] = useState(true); //Випадаюче меню
 
   const handleChangeUserText = (nextChecked) => {
     setCheckedUserText(nextChecked);
@@ -131,8 +131,8 @@ const InputControlPanel = () => {
 
             <Checkbox
               text="Border:"
-              checked={borderTwo}
-              onChange={() => setBorderTwo(!borderTwo)}
+              checked={border}
+              onChange={() => setBorder(!border)}
             />
 
             <Checkbox
@@ -141,29 +141,16 @@ const InputControlPanel = () => {
               onChange={() => setIconAfter(!iconAfter)}
             />
 
-            <label>
-              Icon before:
-              <Switch
-                checked={iconBefore}
-                onChange={() => setIconBefore(!iconBefore)}
-                offColor="#888"
-                onColor="#00bfff"
-                checkedIcon={false}
-                uncheckedIcon={false}
-              />
-            </label>
-
-            <label>
-              Shortkey:
-              <Switch
-                checked={shortKey}
-                onChange={() => setShortkey(!shortKey)}
-                offColor="#888"
-                onColor="#00bfff"
-                checkedIcon={false}
-                uncheckedIcon={false}
-              />
-            </label>
+            <Checkbox
+              text="Icon before:"
+              checked={iconBefore}
+              onChange={() => setIconBefore(!iconBefore)}
+            />
+            <Checkbox
+              text="Shortkey:"
+              checked={shortKey}
+              onChange={() => setShortkey(!shortKey)}
+            />
           </div>
         </div>
       )}
