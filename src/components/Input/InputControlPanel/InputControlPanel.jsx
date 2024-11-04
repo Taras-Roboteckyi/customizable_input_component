@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Switch from "react-switch";
+
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 import { TfiLayoutGrid4 } from "react-icons/tfi";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
@@ -17,9 +17,9 @@ const InputControlPanel = () => {
   const [helperText, setHelperText] = useState(false);
   const [label, setLabel] = useState(false);
   const [info, setInfo] = useState(false);
+
   const [size, setSize] = useState("Small");
   const [alignment, setAlignment] = useState("Left");
-  /* const [borderTwo, setBorderTwo] = useState(false); */
   const [iconAfter, setIconAfter] = useState(null);
   const [iconBefore, setIconBefore] = useState(null);
   const [shortKey, setShortkey] = useState("");
@@ -49,127 +49,124 @@ const InputControlPanel = () => {
   return (
     <div>
       <div>
-        <p>Input</p>
-        <div onClick={toggleDropdown}>
-          {isOpen ? <GoChevronUp /> : <GoChevronDown />}
-        </div>
         <div>
-          <TfiLayoutGrid4 />
-          <FaArrowUpRightFromSquare />
-          <BsThreeDots />
-        </div>
-      </div>
-      {isOpen && (
-        <div className="dropdown-content">
-          <Select
-            value={labelSize}
-            onChange={handleSelectLabelSizeChange}
-            option={{ first: "Small", second: "Medium", third: "Large" }}
-            text="Label size"
-          />
-          <Select
-            value={state}
-            onChange={handleSelectStateChange}
-            option={{ first: "Default", second: "Error", third: "Success" }}
-            text="State"
-          />
-          <Checkbox
-            text="User text:"
-            checked={checkedUserText}
-            onChange={handleChangeUserText}
-          />
-
-          <Select
-            value={labelPosition}
-            onChange={handleSelectLabelPosition}
-            option={{ first: "Top", second: "Left" }}
-            text="Label position"
-          />
-
-          {/* <Checkbox
-            text="Border:"
-            checked={border}
-            onChange={() => setBorder(!border)}
-          /> */}
-
-          <Checkbox
-            text="Helper text:"
-            checked={helperText}
-            onChange={() => setHelperText(!helperText)}
-          />
-
-          <Checkbox
-            text="Label:"
-            checked={label}
-            onChange={() => setLabel(!label)}
-          />
-
-          <Checkbox
-            text="Info:"
-            checked={info}
-            onChange={() => setInfo(!info)}
-          />
-
+          <p>Input</p>
+          <div onClick={toggleDropdown}>
+            {isOpen ? <GoChevronUp /> : <GoChevronDown />}
+          </div>
           <div>
-            <div>
-              <GoChevronDown />
-              <p>_base_input</p>
-            </div>
-            <Select
-              value={size}
-              onChange={(e) => setSize(e.target.value)}
-              option={{ first: "Small", second: "Medium", third: "Large" }}
-              text="Size"
-            />
-
-            <Select
-              value={alignment}
-              onChange={(e) => setAlignment(e.target.value)}
-              option={{ first: "Left", second: "Center", third: "Right" }}
-              text="Alignment"
-            />
-
-            <Checkbox
-              text="Border:"
-              checked={border}
-              onChange={() => setBorder(!border)}
-            />
-
-            <Checkbox
-              text="Icon after:"
-              checked={iconAfter}
-              onChange={() => setIconAfter(!iconAfter)}
-            />
-
-            <Checkbox
-              text="Icon before:"
-              checked={iconBefore}
-              onChange={() => setIconBefore(!iconBefore)}
-            />
-            <Checkbox
-              text="Shortkey:"
-              checked={shortKey}
-              onChange={() => setShortkey(!shortKey)}
-            />
+            <TfiLayoutGrid4 />
+            <FaArrowUpRightFromSquare />
+            <BsThreeDots />
           </div>
         </div>
-      )}
+        {isOpen && (
+          <div className="dropdown-content">
+            <Select
+              value={labelSize}
+              onChange={handleSelectLabelSizeChange}
+              option={{ first: "Small", second: "Medium", third: "Large" }}
+              text="Label size"
+            />
+            <Select
+              value={state}
+              onChange={handleSelectStateChange}
+              option={{ first: "Default", second: "Error", third: "Success" }}
+              text="State"
+            />
+            <Checkbox
+              text="User text:"
+              checked={checkedUserText}
+              onChange={handleChangeUserText}
+            />
 
-      <InputGroup
-        label={label}
-        labelSize={labelSize}
-        labelPosition={labelPosition}
-        state={state}
-        border={border}
-        helperText={helperText}
-        info={info}
-        size={size}
-        alignment={alignment}
-        iconBefore={iconBefore}
-        iconAfter={iconAfter}
-        shortkey={shortKey}
-        userText={checkedUserText}
-      />
+            <Select
+              value={labelPosition}
+              onChange={handleSelectLabelPosition}
+              option={{ first: "Top", second: "Left" }}
+              text="Label position"
+            />
+
+            <Checkbox
+              text="Helper text:"
+              checked={helperText}
+              onChange={() => setHelperText(!helperText)}
+            />
+
+            <Checkbox
+              text="Label:"
+              checked={label}
+              onChange={() => setLabel(!label)}
+            />
+
+            <Checkbox
+              text="Info:"
+              checked={info}
+              onChange={() => setInfo(!info)}
+            />
+
+            <div>
+              <div>
+                <GoChevronDown />
+                <p>_base_input</p>
+              </div>
+              <Select
+                value={size}
+                onChange={(e) => setSize(e.target.value)}
+                option={{ first: "Small", second: "Medium", third: "Large" }}
+                text="Size"
+              />
+
+              <Select
+                value={alignment}
+                onChange={(e) => setAlignment(e.target.value)}
+                option={{ first: "Left", second: "Center", third: "Right" }}
+                text="Alignment"
+              />
+
+              <Checkbox
+                text="Border:"
+                checked={border}
+                onChange={() => setBorder(!border)}
+              />
+
+              <Checkbox
+                text="Icon after:"
+                checked={iconAfter}
+                onChange={() => setIconAfter(!iconAfter)}
+              />
+
+              <Checkbox
+                text="Icon before:"
+                checked={iconBefore}
+                onChange={() => setIconBefore(!iconBefore)}
+              />
+              <Checkbox
+                text="Shortkey:"
+                checked={shortKey}
+                onChange={() => setShortkey(!shortKey)}
+              />
+            </div>
+          </div>
+        )}
+      </div>
+      <div>
+        <InputGroup
+          label={label}
+          labelSize={labelSize}
+          labelPosition={labelPosition}
+          state={state}
+          border={border}
+          helperText={helperText}
+          info={info}
+          size={size}
+          alignment={alignment}
+          iconBefore={iconBefore}
+          iconAfter={iconAfter}
+          shortkey={shortKey}
+          userText={checkedUserText}
+        />
+      </div>
     </div>
   );
 };
