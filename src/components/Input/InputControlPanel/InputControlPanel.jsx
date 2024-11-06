@@ -5,6 +5,8 @@ import { TfiLayoutGrid4 } from "react-icons/tfi";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { BsThreeDots } from "react-icons/bs";
 
+import "../../../index.css";
+
 import InputGroup from "../InputGroup/InputGroup";
 import { Select } from "../Select/Select";
 import { Checkbox } from "../Checkbox/Checkbox";
@@ -50,7 +52,7 @@ const InputControlPanel = () => {
     <div>
       <div>
         <div>
-          <p>Input</p>
+          <p className="text-2xl">Input</p>
           <div onClick={toggleDropdown}>
             {isOpen ? <GoChevronUp /> : <GoChevronDown />}
           </div>
