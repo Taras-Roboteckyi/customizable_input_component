@@ -49,7 +49,7 @@ const InputControlPanel = () => {
   };
 
   return (
-    <div>
+    <div className=" md:columns-2">
       <div>
         <div>
           <p className="text-2xl">Input</p>
