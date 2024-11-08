@@ -49,7 +49,7 @@ const InputControlPanel = () => {
   };
 
   return (
-    <div className=" md:columns-2">
+    <div className=" md:flex ">
       <div>
         <div>
           <p className="text-2xl">Input</p>
@@ -152,7 +152,7 @@ const InputControlPanel = () => {
           </div>
         )}
       </div>
-      <div>
+      <div className="order-first">
         <InputGroup
           label={label}
           labelSize={labelSize}
