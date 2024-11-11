@@ -49,12 +49,14 @@ const InputControlPanel = () => {
   };
 
   return (
-    <div className=" md:flex ">
-      <div>
-        <div>
-          <p className="text-2xl">Input</p>
-          <div onClick={toggleDropdown}>
-            {isOpen ? <GoChevronUp /> : <GoChevronDown />}
+    <div className="px-5 py-10 md:flex justify-center">
+      <div className="mb-10 ">
+        <div className="flex justify-between">
+          <div>
+            <p className="text-2xl">Input</p>
+            <div onClick={toggleDropdown}>
+              {isOpen ? <GoChevronUp /> : <GoChevronDown />}
+            </div>
           </div>
           <div>
             <TfiLayoutGrid4 />
