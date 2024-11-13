@@ -49,12 +49,12 @@ const InputControlPanel = () => {
   };
 
   return (
-    <div className="px-5 py-10 md:flex justify-center">
-      <div className="mb-10 ">
+    <div className="px-5 py-10 md:flex justify-center ">
+      <div className="mb-10 p-5 bg-slate-400 ">
         <div className="flex justify-between">
-          <div className="inline-flex">
-            <p className="text-2xl">Input</p>
-            <div onClick={toggleDropdown}>
+          <div className="flex content-center">
+            <p className="font-mono font-semibold text-xl mr-3">Input</p>
+            <div onClick={toggleDropdown} className="pt-1.5">
               {isOpen ? <GoChevronUp /> : <GoChevronDown />}
             </div>
           </div>
