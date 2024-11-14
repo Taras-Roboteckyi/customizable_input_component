@@ -58,9 +58,9 @@ const InputControlPanel = () => {
               {isOpen ? <GoChevronUp /> : <GoChevronDown />}
             </div>
           </div>
-          <div className="flex">
-            <TfiLayoutGrid4 />
-            <FaArrowUpRightFromSquare />
+          <div className="flex pt-1.5">
+            <TfiLayoutGrid4 className="mr-4" />
+            <FaArrowUpRightFromSquare className="mr-4" />
             <BsThreeDots />
           </div>
         </div>
