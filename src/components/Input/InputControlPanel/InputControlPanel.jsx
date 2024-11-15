@@ -66,49 +66,50 @@ const InputControlPanel = () => {
         </div>
         {isOpen && (
           <div className="dropdown-content">
-            <Select
-              value={labelSize}
-              onChange={handleSelectLabelSizeChange}
-              option={{ first: "Small", second: "Medium", third: "Large" }}
-              text="Label size"
-            />
-            <Select
-              value={state}
-              onChange={handleSelectStateChange}
-              option={{ first: "Default", second: "Error", third: "Success" }}
-              text="State"
-            />
-            <Checkbox
-              text="User text:"
-              checked={checkedUserText}
-              onChange={handleChangeUserText}
-            />
+            <div className="grid grid-cols-1 md:grid-cols-6">
+              <Select
+                value={labelSize}
+                onChange={handleSelectLabelSizeChange}
+                option={{ first: "Small", second: "Medium", third: "Large" }}
+                text="Label size"
+              />
+              <Select
+                value={state}
+                onChange={handleSelectStateChange}
+                option={{ first: "Default", second: "Error", third: "Success" }}
+                text="State"
+              />
+              <Checkbox
+                text="User text:"
+                checked={checkedUserText}
+                onChange={handleChangeUserText}
+              />
 
-            <Select
-              value={labelPosition}
-              onChange={handleSelectLabelPosition}
-              option={{ first: "Top", second: "Left" }}
-              text="Label position"
-            />
+              <Select
+                value={labelPosition}
+                onChange={handleSelectLabelPosition}
+                option={{ first: "Top", second: "Left" }}
+                text="Label position"
+              />
 
-            <Checkbox
-              text="Helper text:"
-              checked={helperText}
-              onChange={() => setHelperText(!helperText)}
-            />
+              <Checkbox
+                text="Helper text:"
+                checked={helperText}
+                onChange={() => setHelperText(!helperText)}
+              />
 
-            <Checkbox
-              text="Label:"
-              checked={label}
-              onChange={() => setLabel(!label)}
-            />
+              <Checkbox
+                text="Label:"
+                checked={label}
+                onChange={() => setLabel(!label)}
+              />
 
-            <Checkbox
-              text="Info:"
-              checked={info}
-              onChange={() => setInfo(!info)}
-            />
-
+              <Checkbox
+                text="Info:"
+                checked={info}
+                onChange={() => setInfo(!info)}
+              />
+            </div>
             <div>
               <div>
                 <GoChevronDown />

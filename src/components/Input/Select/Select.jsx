@@ -2,7 +2,7 @@ export const Select = ({ value, onChange, option, text }) => {
   const { first, second, third } = option;
 
   return (
-    <label>
+    <label className="mb-3">
       {text}:
       <select value={value} onChange={onChange}>
         <option value={first}>{first}</option>
