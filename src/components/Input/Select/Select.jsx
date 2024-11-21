@@ -2,19 +2,19 @@ export const Select = ({ value, onChange, option, text }) => {
   const { first, second, third } = option;
   /* bg-bg_color */
   return (
-    <label className="mb-3 ">
-      {text}:
+    <div className="flex items-center justify-between mb-3">
+      <label className=" text-white  w-full">{text}:</label>
       <select
         value={value}
         onChange={onChange}
-        className="border-2 border-red-500 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+        className="w-full  border-2 border-white rounded-md p-0.6 h-6 text-sm bg-bg_color text-white focus:outline-none focus:border-blue-500"
       >
-        <option value={first} className="border-2 border-rose-600">
+        <option value={first} className="">
           {first}
         </option>
         <option value={second}>{second}</option>
         {third && <option value={third}>{third}</option>}
       </select>
-    </label>
+    </div>
   );
 };
