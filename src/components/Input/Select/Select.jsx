@@ -2,8 +2,8 @@ export const Select = ({ value, onChange, option, text }) => {
   const { first, second, third } = option;
   /* bg-bg_color */
   return (
-    <div className="flex items-center justify-between mb-3">
-      <label className=" text-white  w-full">{text}:</label>
+    <div className=" flex  justify-items-start mb-3">
+      <label className="w-40 text-white mr-10 ">{text}:</label>
       <select
         value={value}
         onChange={onChange}
