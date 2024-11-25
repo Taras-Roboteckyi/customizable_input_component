@@ -66,7 +66,7 @@ const InputControlPanel = () => {
         </div>
         {isOpen && (
           <div className="dropdown-content">
-            <div className="grid grid-cols-1 md:grid-cols-6">
+            <div className="grid grid-cols-1 ">
               <Select
                 value={labelSize}
                 onChange={handleSelectLabelSizeChange}
