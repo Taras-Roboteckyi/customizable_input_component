@@ -50,8 +50,8 @@ const InputControlPanel = () => {
 
   return (
     <div className=" px-5 py-10 md:flex justify-center ">
-      <div className=" mb-10 p-5 bg-bg_color ">
-        <div className="flex justify-between">
+      <div className=" p-5 bg-bg_color ">
+        <div className="flex justify-between mb-5 ">
           <div className="flex content-center">
             <p className="font-mono font-semibold text-xl mr-3">Input</p>
             <div onClick={toggleDropdown} className="pt-1.5">
