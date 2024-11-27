@@ -111,8 +111,8 @@ const InputControlPanel = () => {
               />
             </div>
             <div>
-              <div>
-                <GoChevronDown />
+              <div className="flex mb-5">
+                <GoChevronDown className="font-mono font-semibold text-xl mr-1 pt-0.5" />
                 <p>_base_input</p>
               </div>
               <Select
