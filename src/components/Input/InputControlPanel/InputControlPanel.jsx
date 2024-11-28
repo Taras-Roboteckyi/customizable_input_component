@@ -50,7 +50,7 @@ const InputControlPanel = () => {
 
   return (
     <div className=" px-5 py-10 md:flex justify-center ">
-      <div className=" p-5 bg-bg_color ">
+      <div className=" p-5 bg-bg_color mb-5">
         <div className="flex justify-between mb-5 ">
           <div className="flex content-center">
             <p className="font-mono font-semibold text-xl mr-3">Input</p>
@@ -155,7 +155,7 @@ const InputControlPanel = () => {
           </div>
         )}
       </div>
-      <div className="order-first">
+      <div className="order-first md:mr-20 content-center">
         <InputGroup
           label={label}
           labelSize={labelSize}

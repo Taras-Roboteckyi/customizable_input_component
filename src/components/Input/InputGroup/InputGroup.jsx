@@ -21,11 +21,11 @@ const InputGroup = ({
 }) => {
   const labelClass = `input-label ${labelSize}`;
   const inputClass = `input-text ${size} ${state} ${alignment}`;
-  const inputWrapperClass = `input-wrapper ${border ? "bordered" : ""}`;
+  const inputWrapperClass = `input-wrapper ${border ? "border-2 rounded-md border-black" : ""}`;
 
   return (
     <div
-      className={inputWrapperClass}
+      className={`${inputWrapperClass}  `}
       style={{
         display: "flex",
         flexDirection: labelPosition === "top" ? "column" : "row",
@@ -38,7 +38,10 @@ const InputGroup = ({
       )}
       <div
         className="input-container"
-        style={{ position: "relative", display: "flex", alignItems: "center" }}
+        style={{
+          /*  position: "relative", */ display: "flex",
+          alignItems: "center",
+        }}
       >
         {iconBefore && <span className="icon-before">{iconBefore}</span>}
         <InputText
