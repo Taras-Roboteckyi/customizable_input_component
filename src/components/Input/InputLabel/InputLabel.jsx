@@ -1,8 +1,10 @@
 import React from "react";
 
-const InputLabel = ({ htmlFor, children, ...props }) => {
+const InputLabel = ({ children, ...props }) => {
+  const id = React.useId();
+
   return (
-    <label htmlFor={htmlFor} {...props}>
+    <label htmlFor={id} {...props} className="font-sans text-xl mr-3">
       {children}
     </label>
   );

@@ -14,7 +14,12 @@ module.exports = {
       "bubble-gum": "#ff77e9",
       bermuda: "#78dcca",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"], // Додаємо шрифт Roboto
+        serif: ["Roboto", "serif"],
+      },
+    },
   },
   plugins: [],
 };

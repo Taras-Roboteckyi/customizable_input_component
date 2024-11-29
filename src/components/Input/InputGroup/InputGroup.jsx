@@ -5,7 +5,7 @@ import InputAnnotation from "../InputAnnotation/InputAnnotation";
 
 const InputGroup = ({
   label,
-  labelSize = "sm",
+  labelSize = "Small",
   labelPosition = "top",
   state = "default",
   border = true,
@@ -19,7 +19,7 @@ const InputGroup = ({
   userText = false,
   ...props
 }) => {
-  const labelClass = `input-label ${labelSize}`;
+  //const labelClass = `input-label ${labelSize}`;
   const inputClass = `input-text ${size} ${state} ${alignment}`;
   const inputWrapperClass = `input-wrapper ${border ? "border-2 rounded-md border-black" : ""}`;
 
@@ -31,11 +31,7 @@ const InputGroup = ({
         flexDirection: labelPosition === "top" ? "column" : "row",
       }}
     >
-      {label && (
-        <InputLabel className={labelClass} htmlFor={props.id}>
-          {label}
-        </InputLabel>
-      )}
+      {label && <InputLabel>Email</InputLabel>}
       <div
         className="input-container"
         style={{
