@@ -1,5 +1,8 @@
 import * as React from "react";
 import InputControlPanel from "./components/Input/InputControlPanel/InputControlPanel";
+
+import "./index.css";
+
 //import InputControlPanelStories from "./components/Input/InputControlPanel/InputControlPanel.stories";
 //import InputGroup from "./components/Input/InputGroup/InputGroup";
 

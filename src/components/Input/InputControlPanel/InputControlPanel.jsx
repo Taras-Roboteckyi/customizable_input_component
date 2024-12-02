@@ -5,8 +5,6 @@ import { TfiLayoutGrid4 } from "react-icons/tfi";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { BsThreeDots } from "react-icons/bs";
 
-import "../../../index.css";
-
 import InputGroup from "../InputGroup/InputGroup";
 import { Select } from "../Select/Select";
 import { Checkbox } from "../Checkbox/Checkbox";
@@ -112,8 +110,10 @@ const InputControlPanel = () => {
             </div>
             <div>
               <div className="flex mb-5">
-                <GoChevronDown className=" mr-1 pt-0.5" />
-                <p className="font-mono font-semibold text-xl">_base_input</p>
+                <GoChevronDown className="fill-white mr-1 pt-0.5" />
+                <p className="font-mono font-semibold text-lg text-white">
+                  _base_input
+                </p>
               </div>
               <Select
                 value={size}
