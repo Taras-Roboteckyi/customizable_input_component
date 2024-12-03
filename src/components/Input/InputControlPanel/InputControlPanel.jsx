@@ -48,12 +48,18 @@ const InputControlPanel = () => {
 
   return (
     <div className=" px-5 py-10 md:flex justify-center ">
-      <div className=" p-5 bg-bg_color mb-5">
+      <div className="bg-[url('/src/images/background.jpg')] bg-cover bg-center   p-5 mb-5 md:mb-0">
         <div className="flex justify-between mb-5 ">
           <div className="flex content-center">
-            <p className="font-mono font-semibold text-xl mr-3">Input</p>
+            <p className="font-mono font-semibold text-xl text-white mr-3">
+              Input
+            </p>
             <div onClick={toggleDropdown} className="pt-1.5">
-              {isOpen ? <GoChevronUp /> : <GoChevronDown />}
+              {isOpen ? (
+                <GoChevronUp className="fill-white" />
+              ) : (
+                <GoChevronDown className="fill-white" />
+              )}
             </div>
           </div>
           <div className="flex pt-1.5">
@@ -109,8 +115,10 @@ const InputControlPanel = () => {
               />
             </div>
             <div>
-              <div className="flex mb-5">
-                <GoChevronDown className="fill-white mr-1 pt-0.5" />
+              <div className="flex align-center mb-5">
+                <div className="mr-1 pt-1.5">
+                  <GoChevronDown className="fill-white  " />
+                </div>
                 <p className="font-mono font-semibold text-lg text-white">
                   _base_input
                 </p>
