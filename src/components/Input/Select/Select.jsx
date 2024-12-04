@@ -7,13 +7,19 @@ export const Select = ({ value, onChange, option, text }) => {
       <select
         value={value}
         onChange={onChange}
-        className="w-40  border-2 border-white rounded-md p-0.6 h-6 text-sm bg-bg_color text-white focus:outline-none focus:border-blue-500"
+        className="w-40  border-2 border-white rounded-md p-0.6 h-6 text-sm bg-bg_color text-white focus:outline-none focus:border-blue-500 cursor-pointer"
       >
-        <option value={first} className="">
+        <option value={first} className="cursor-pointer">
           {first}
         </option>
-        <option value={second}>{second}</option>
-        {third && <option value={third}>{third}</option>}
+        <option value={second} className="cursor-pointer">
+          {second}
+        </option>
+        {third && (
+          <option value={third} className="cursor-pointer">
+            {third}
+          </option>
+        )}
       </select>
     </div>
   );

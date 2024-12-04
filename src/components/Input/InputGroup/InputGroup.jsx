@@ -20,16 +20,17 @@ const InputGroup = ({
   ...props
 }) => {
   //const labelClass = `input-label ${labelSize}`;
-  const inputClass = `input-text ${size} ${state} ${alignment}`;
-  const inputWrapperClass = `input-wrapper ${border ? "border-2 rounded-md border-black" : ""}`;
+  //const inputClass = `input-text ${size} ${state} ${alignment}`;
+  //const inputWrapperClass = `input-wrapper ${border ? "border-2 rounded-md border-black" : ""}`;
 
   return (
     <div
-      className={`${inputWrapperClass}  `}
-      style={{
+    /* className={`${inputWrapperClass}  `} */
+
+    /* style={{
         display: "flex",
         flexDirection: labelPosition === "top" ? "column" : "row",
-      }}
+      }} */
     >
       {label && <InputLabel>Email</InputLabel>}
       <div
@@ -40,14 +41,19 @@ const InputGroup = ({
         }}
       >
         {iconBefore && <span className="icon-before">{iconBefore}</span>}
-        <InputText
-          className={inputClass}
-          {...props}
-          style={{
-            paddingLeft: iconBefore ? "1.5rem" : undefined,
-            paddingRight: iconAfter ? "1.5rem" : undefined,
-          }}
-        />
+        {border ? (
+          <InputText
+            /* className={inputClass} */
+            className="border-2 rounded-md border-black"
+            {...props}
+            style={{
+              paddingLeft: iconBefore ? "1.5rem" : undefined,
+              paddingRight: iconAfter ? "1.5rem" : undefined,
+            }}
+          />
+        ) : (
+          ""
+        )}
         {iconAfter && <span className="icon-after">{iconAfter}</span>}
       </div>
       {helperText && <InputAnnotation text={helperText} />}

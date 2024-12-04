@@ -49,23 +49,23 @@ const InputControlPanel = () => {
   return (
     <div className=" px-5 py-10 md:flex justify-center ">
       <div className="bg-[url('/src/images/background.jpg')] bg-cover bg-center   p-5 mb-5 md:mb-0">
-        <div className="flex justify-between mb-5 ">
+        <div className=" flex justify-between mb-5 md:w-96">
           <div className="flex content-center">
             <p className="font-mono font-semibold text-xl text-white mr-3">
               Input
             </p>
             <div onClick={toggleDropdown} className="pt-1.5">
               {isOpen ? (
-                <GoChevronUp className="fill-white" />
+                <GoChevronUp className="fill-white cursor-pointer" />
               ) : (
-                <GoChevronDown className="fill-white" />
+                <GoChevronDown className="fill-white cursor-pointer" />
               )}
             </div>
           </div>
-          <div className="flex pt-1.5">
-            <TfiLayoutGrid4 className="mr-4" />
-            <FaArrowUpRightFromSquare className="mr-4" />
-            <BsThreeDots />
+          <div className="flex pt-1.5 ">
+            <TfiLayoutGrid4 className="mr-4 fill-white" />
+            <FaArrowUpRightFromSquare className="mr-4 fill-white" />
+            <BsThreeDots className="fill-white" />
           </div>
         </div>
         {isOpen && (
@@ -163,7 +163,7 @@ const InputControlPanel = () => {
           </div>
         )}
       </div>
-      <div className="order-first md:mr-20 content-center">
+      <div className="order-first md:content-center md:w-62 mr-5">
         <InputGroup
           label={label}
           labelSize={labelSize}
