@@ -32,7 +32,7 @@ const InputGroup = ({
         flexDirection: labelPosition === "top" ? "column" : "row",
       }} */
     >
-      {label && <InputLabel>Email</InputLabel>}
+      {label && <InputLabel labelSize={labelSize}>Email</InputLabel>}
       <div
         className="input-container"
         style={{
