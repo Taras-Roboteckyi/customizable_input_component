@@ -7,7 +7,7 @@ const InputGroup = ({
   label,
   labelSize = "Small",
   labelPosition = "top",
-  state = "default",
+  state = "Default",
   border = true,
   helperText = "",
   info = "",
@@ -44,8 +44,8 @@ const InputGroup = ({
         {border ? (
           <InputText
             /* className={inputClass} */
-            className="border-2 rounded-md border-black"
-            {...props}
+            state={state}
+            /* {...props} */
             style={{
               paddingLeft: iconBefore ? "1.5rem" : undefined,
               paddingRight: iconAfter ? "1.5rem" : undefined,

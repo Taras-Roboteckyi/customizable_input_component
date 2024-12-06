@@ -13,6 +13,8 @@ module.exports = {
       silver: "#ecebff",
       "bubble-gum": "#ff77e9",
       bermuda: "#78dcca",
+      green: " rgb(34 197 94)",
+      red: "rgb(239 68 68)",
     },
     extend: {
       fontFamily: {
