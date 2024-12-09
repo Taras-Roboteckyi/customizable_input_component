@@ -6,7 +6,7 @@ import InputAnnotation from "../InputAnnotation/InputAnnotation";
 const InputGroup = ({
   label,
   labelSize = "Small",
-  labelPosition = "top",
+  labelPosition = "Left",
   state = "Default",
   border = true,
   helperText = "",
@@ -32,7 +32,19 @@ const InputGroup = ({
         flexDirection: labelPosition === "top" ? "column" : "row",
       }} */
     >
-      {label && <InputLabel labelSize={labelSize}>Email</InputLabel>}
+      {label && (
+        <div
+          className={` ${
+            labelPosition === "Left"
+              ? "text-left"
+              : labelPosition === "Center"
+                ? "text-center"
+                : "text-right"
+          }`}
+        >
+          <InputLabel labelSize={labelSize}>Email</InputLabel>
+        </div>
+      )}
       <div
         className="input-container"
         style={{

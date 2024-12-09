@@ -92,7 +92,7 @@ const InputControlPanel = () => {
               <Select
                 value={labelPosition}
                 onChange={handleSelectLabelPosition}
-                option={{ first: "Top", second: "Left" }}
+                option={{ first: "Left", second: "Center", third: "Right" }}
                 text="Label position"
               />
 
