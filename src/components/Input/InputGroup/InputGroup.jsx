@@ -17,7 +17,6 @@ const InputGroup = ({
   iconAfter = null,
   shortkey = "",
   userText = false,
-  ...props
 }) => {
   //const labelClass = `input-label ${labelSize}`;
   //const inputClass = `input-text ${size} ${state} ${alignment}`;
@@ -26,11 +25,6 @@ const InputGroup = ({
   return (
     <div
     /* className={`${inputWrapperClass}  `} */
-
-    /* style={{
-        display: "flex",
-        flexDirection: labelPosition === "top" ? "column" : "row",
-      }} */
     >
       {label && (
         <div
@@ -55,9 +49,7 @@ const InputGroup = ({
         {iconBefore && <span className="icon-before">{iconBefore}</span>}
         {border ? (
           <InputText
-            /* className={inputClass} */
             state={state}
-            /* {...props} */
             style={{
               paddingLeft: iconBefore ? "1.5rem" : undefined,
               paddingRight: iconAfter ? "1.5rem" : undefined,
