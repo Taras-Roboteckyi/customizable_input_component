@@ -21,7 +21,6 @@ const InputGroup = ({
   //const labelClass = `input-label ${labelSize}`;
   //const inputClass = `input-text ${size} ${state} ${alignment}`;
   //const inputWrapperClass = `input-wrapper ${border ? "border-2 rounded-md border-black" : ""}`;
-
   return (
     <div
     /* className={`${inputWrapperClass}  `} */
@@ -50,6 +49,7 @@ const InputGroup = ({
         {border ? (
           <InputText
             state={state}
+            userText={userText}
             style={{
               paddingLeft: iconBefore ? "1.5rem" : undefined,
               paddingRight: iconAfter ? "1.5rem" : undefined,
