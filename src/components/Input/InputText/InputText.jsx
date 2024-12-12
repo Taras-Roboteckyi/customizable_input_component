@@ -16,7 +16,8 @@ const InputText = ({ /* value, onChange, */ ...props }) => {
           : state === "Error"
             ? " border-red"
             : "border-green"
-      }`}
+      } 
+      ${userText ? "pointer-events-auto" : "pointer-events-none "}`}
     />
   );
 };
