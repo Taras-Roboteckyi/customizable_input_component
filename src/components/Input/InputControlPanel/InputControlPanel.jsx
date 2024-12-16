@@ -12,7 +12,7 @@ import { Checkbox } from "../Checkbox/Checkbox";
 const InputControlPanel = () => {
   const [labelSize, setLabelSize] = useState("Small");
   const [state, setState] = useState("Default");
-  const [labelPosition, setLabelPosition] = useState("Top");
+  const [labelPosition, setLabelPosition] = useState("Left");
   const [border, setBorder] = useState(false);
   const [helperText, setHelperText] = useState(false);
   const [label, setLabel] = useState(false);

@@ -18,6 +18,7 @@ const InputGroup = ({
   shortkey = "",
   userText = false,
 }) => {
+  console.log("labelPosition,", labelPosition);
   //const labelClass = `input-label ${labelSize}`;
   //const inputClass = `input-text ${size} ${state} ${alignment}`;
   //const inputWrapperClass = `input-wrapper ${border ? "border-2 rounded-md border-black" : ""}`;
