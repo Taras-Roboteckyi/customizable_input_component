@@ -37,6 +37,12 @@ const InputGroup = ({
           }`}
         >
           <InputLabel labelSize={labelSize}>Email</InputLabel>
+          {info && (
+            <InputAnnotation
+              text={info}
+              style={{ fontStyle: "italic", fontSize: "0.85em" }}
+            />
+          )}
         </div>
       )}
       <div
@@ -62,12 +68,7 @@ const InputGroup = ({
         {iconAfter && <span className="icon-after">{iconAfter}</span>}
       </div>
       {helperText && <InputAnnotation text={helperText} />}
-      {info && (
-        <InputAnnotation
-          text={info}
-          style={{ fontStyle: "italic", fontSize: "0.85em" }}
-        />
-      )}
+
       {shortkey && <InputAnnotation text={`Shortcut: ${shortkey}`} />}
     </div>
   );
