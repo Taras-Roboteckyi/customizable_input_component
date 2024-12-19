@@ -1,7 +1,14 @@
 import React from "react";
 
+import { BsInfoCircle } from "react-icons/bs";
+
 const InputAnnotation = ({ text, ...props }) => {
-  return <small {...props}>{text}</small>;
+  return (
+    <>
+      <BsInfoCircle />
+      <small {...props}>{text}</small>
+    </>
+  );
 };
 
 export default InputAnnotation;
