@@ -28,7 +28,7 @@ const InputGroup = ({
     >
       {label && (
         <div
-          className={` ${
+          className={`  ${
             labelPosition === "Left"
               ? "text-left"
               : labelPosition === "Center"
@@ -39,7 +39,7 @@ const InputGroup = ({
           <InputLabel labelSize={labelSize}>Email</InputLabel>
           {info && (
             <InputAnnotation
-              text={info}
+              text={"This is a tooltip"}
               style={{ fontStyle: "italic", fontSize: "0.85em" }}
             />
           )}
@@ -67,9 +67,9 @@ const InputGroup = ({
         )}
         {iconAfter && <span className="icon-after">{iconAfter}</span>}
       </div>
-      {helperText && <InputAnnotation text={helperText} />}
+      {/* {helperText && <InputAnnotation text={helperText} />}
 
-      {shortkey && <InputAnnotation text={`Shortcut: ${shortkey}`} />}
+      {shortkey && <InputAnnotation text={`Shortcut: ${shortkey}`} />} */}
     </div>
   );
 };
