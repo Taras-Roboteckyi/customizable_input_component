@@ -28,7 +28,7 @@ const InputGroup = ({
     >
       {label && (
         <div
-          className={`  ${
+          className={` flex ${
             labelPosition === "Left"
               ? "text-left"
               : labelPosition === "Center"

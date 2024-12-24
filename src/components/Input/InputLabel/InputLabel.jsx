@@ -9,7 +9,7 @@ const InputLabel = ({ children, ...props }) => {
     <label
       htmlFor={id}
       {...props}
-      className={`font-sans  text-midnight 
+      className={`font-sans mr-2 text-midnight 
         ${
           labelSize === "Small"
             ? "text-sm"
