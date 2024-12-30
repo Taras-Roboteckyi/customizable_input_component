@@ -10,13 +10,17 @@ const InputAnnotation = ({ text, ...props }) => {
 
   return (
     <div
-      className="group flex items-center space-x-2"
+      className="group relative flex items-center space-x-2"
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
     >
       <BsInfoCircle className="text-gray-700 group-hover:text-blue-500" />
-      <span id="text" className="font-sans text-sm text-gray-700 hidden">
+      <span
+        id="text"
+        className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 hidden w-max px-3 py-1 text-sm text-white bg-black rounded shadow group-hover:block"
+      >
         This is tooltip
+        <div className="absolute left-1/2 -translate-x-1/2 top-full border-4 border-black border-transparent"></div>
       </span>
     </div>
   );
