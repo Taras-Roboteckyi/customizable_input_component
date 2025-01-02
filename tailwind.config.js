@@ -7,6 +7,7 @@ module.exports = {
       offColor: "#888",
       onColor: "#00bfff",
       white: "#ffffff",
+      black: "#000000",
       midnight: "#121063",
       metal: "#565584",
       tahiti: "#3ab7bf",
