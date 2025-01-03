@@ -30,10 +30,10 @@ const InputGroup = ({
         <div
           className={` flex ${
             labelPosition === "Left"
-              ? "text-left"
+              ? "justify-start"
               : labelPosition === "Center"
-                ? "text-center"
-                : "text-right"
+                ? "justify-center"
+                : "justify-end"
           }`}
         >
           <InputLabel labelSize={labelSize}>Email</InputLabel>
