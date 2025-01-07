@@ -2,6 +2,7 @@ import React from "react";
 import InputText from "../InputText/InputText";
 import InputLabel from "../InputLabel/InputLabel";
 import InputAnnotation from "../InputAnnotation/InputAnnotation";
+import InputHelperText from "../InputHelperText/InputHelperText";
 
 const InputGroup = ({
   label,
@@ -67,9 +68,9 @@ const InputGroup = ({
         )}
         {iconAfter && <span className="icon-after">{iconAfter}</span>}
       </div>
-      {/* {helperText && <InputAnnotation text={helperText} />}
+      {helperText && <InputHelperText />}
 
-      {shortkey && <InputAnnotation text={`Shortcut: ${shortkey}`} />} */}
+      {/* {shortkey && <InputAnnotation text={`Shortcut: ${shortkey}`} />} */}
     </div>
   );
 };
