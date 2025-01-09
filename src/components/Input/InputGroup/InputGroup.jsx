@@ -12,7 +12,7 @@ const InputGroup = ({
   border = true,
   helperText = "",
   info = "",
-  size = "sm",
+  size = "Small",
   alignment = "left",
   iconBefore = null,
   iconAfter = null,
@@ -58,6 +58,7 @@ const InputGroup = ({
           <InputText
             state={state}
             userText={userText}
+            size={size}
             style={{
               paddingLeft: iconBefore ? "1.5rem" : undefined,
               paddingRight: iconAfter ? "1.5rem" : undefined,
