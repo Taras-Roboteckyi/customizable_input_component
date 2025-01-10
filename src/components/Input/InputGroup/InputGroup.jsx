@@ -54,19 +54,18 @@ const InputGroup = ({
         }}
       >
         {iconBefore && <span className="icon-before">{iconBefore}</span>}
-        {border ? (
-          <InputText
-            state={state}
-            userText={userText}
-            size={size}
-            style={{
-              paddingLeft: iconBefore ? "1.5rem" : undefined,
-              paddingRight: iconAfter ? "1.5rem" : undefined,
-            }}
-          />
-        ) : (
-          ""
-        )}
+
+        <InputText
+          state={state}
+          userText={userText}
+          size={size}
+          border={border}
+          style={{
+            paddingLeft: iconBefore ? "1.5rem" : undefined,
+            paddingRight: iconAfter ? "1.5rem" : undefined,
+          }}
+        />
+
         {iconAfter && <span className="icon-after">{iconAfter}</span>}
       </div>
       {helperText && <InputHelperText />}
