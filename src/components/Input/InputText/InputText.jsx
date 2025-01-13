@@ -1,7 +1,7 @@
 import React from "react";
 
 const InputText = ({ /* value, onChange, */ ...props }) => {
-  const { state, userText, size, border } = props;
+  const { state, userText, size, border, alignment } = props;
 
   return (
     <input
@@ -19,6 +19,7 @@ const InputText = ({ /* value, onChange, */ ...props }) => {
       } 
       ${border ? "border focus:border" : "border-none focus:outline-none"}
       ${userText ? "pointer-events-auto" : "pointer-events-none "} 
+      ${alignment === "Left" ? "text-left" : alignment === "Center" ? "text-center" : "text-right"}
        ${
          size === "Small"
            ? "text-sm"

@@ -13,7 +13,7 @@ const InputGroup = ({
   helperText = "",
   info = "",
   size = "Small",
-  alignment = "left",
+  alignment = "Left",
   iconBefore = null,
   iconAfter = null,
   shortkey = "",
@@ -60,6 +60,7 @@ const InputGroup = ({
           userText={userText}
           size={size}
           border={border}
+          alignment={alignment}
           style={{
             paddingLeft: iconBefore ? "1.5rem" : undefined,
             paddingRight: iconAfter ? "1.5rem" : undefined,
