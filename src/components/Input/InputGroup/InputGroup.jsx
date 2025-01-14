@@ -27,25 +27,24 @@ const InputGroup = ({
     <div
     /* className={`${inputWrapperClass}  `} */
     >
-      {label && (
-        <div
-          className={` flex ${
-            labelPosition === "Left"
-              ? "justify-start"
-              : labelPosition === "Center"
-                ? "justify-center"
-                : "justify-end"
-          }`}
-        >
-          <InputLabel labelSize={labelSize}>Email</InputLabel>
-          {info && (
-            <InputAnnotation
-              text={"This is a tooltip"}
-              style={{ fontStyle: "italic", fontSize: "0.85em" }}
-            />
-          )}
-        </div>
-      )}
+      <div
+        className={` flex md:mb-1 ${
+          labelPosition === "Left"
+            ? "justify-start"
+            : labelPosition === "Center"
+              ? "justify-center"
+              : "justify-end"
+        }`}
+      >
+        {label && <InputLabel labelSize={labelSize}>Email</InputLabel>}
+        {info && (
+          <InputAnnotation
+            text={"This is a tooltip"}
+            style={{ fontStyle: "italic", fontSize: "0.85em" }}
+          />
+        )}
+      </div>
+
       <div
         className="input-container"
         style={{
