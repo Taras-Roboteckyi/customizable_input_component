@@ -1,4 +1,7 @@
 import React from "react";
+
+import { CiSearch } from "react-icons/ci";
+
 import InputText from "../InputText/InputText";
 import InputLabel from "../InputLabel/InputLabel";
 import InputAnnotation from "../InputAnnotation/InputAnnotation";
@@ -48,11 +51,12 @@ const InputGroup = ({
       <div
         className="input-container"
         style={{
-          /*  position: "relative", */ display: "flex",
+          position: "relative",
+          display: "flex",
           alignItems: "center",
         }}
       >
-        {iconBefore && <span className="icon-before">{iconBefore}</span>}
+        {iconBefore && <CiSearch className="size-4 " />}
 
         <InputText
           state={state}
@@ -60,13 +64,14 @@ const InputGroup = ({
           size={size}
           border={border}
           alignment={alignment}
+          className={"ml-2 flex-1"}
           style={{
             paddingLeft: iconBefore ? "1.5rem" : undefined,
             paddingRight: iconAfter ? "1.5rem" : undefined,
           }}
         />
 
-        {iconAfter && <span className="icon-after">{iconAfter}</span>}
+        {/* {iconAfter && <span className="icon-after">{iconAfter}</span>} */}
       </div>
       {helperText && <InputHelperText />}
 
