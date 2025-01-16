@@ -56,7 +56,17 @@ const InputGroup = ({
           alignItems: "center",
         }}
       >
-        {iconBefore && <CiSearch className="size-4 " />}
+        {iconBefore && (
+          <CiSearch
+            className={` absolute left-1 top-1/2 transform -translate-y-1/2  ${
+              size === "Small"
+                ? "size-4"
+                : size === "Medium"
+                  ? "size-5"
+                  : "size-6"
+            }`}
+          />
+        )}
 
         <InputText
           state={state}
@@ -64,7 +74,6 @@ const InputGroup = ({
           size={size}
           border={border}
           alignment={alignment}
-          className={"ml-2 flex-1"}
           style={{
             paddingLeft: iconBefore ? "1.5rem" : undefined,
             paddingRight: iconAfter ? "1.5rem" : undefined,

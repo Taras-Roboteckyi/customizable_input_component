@@ -10,7 +10,7 @@ const InputText = ({ /* value, onChange, */ ...props }) => {
       /* onChange={(e) => e.target.value} */
       placeholder={userText ? " Enter email" : " Text input is limited"}
       /* {...props} */
-      className={`font-sans border-2 rounded-md  p-1.5 ${
+      className={`font-sans border-2 rounded-md  p-1.5   ${
         state === "Default"
           ? " border-black"
           : state === "Error"
@@ -22,10 +22,10 @@ const InputText = ({ /* value, onChange, */ ...props }) => {
       ${alignment === "Left" ? "text-left" : alignment === "Center" ? "text-center" : "text-right"}
        ${
          size === "Small"
-           ? "text-sm"
+           ? "text-sm pl-6"
            : size === "Medium"
-             ? "text-lg"
-             : "text-xl"
+             ? "text-lg pl-7"
+             : "text-xl pl-8"
        }`}
     />
   );
