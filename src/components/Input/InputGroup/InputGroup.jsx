@@ -1,6 +1,7 @@
 import React from "react";
 
 import { CiSearch } from "react-icons/ci";
+import { MdInput } from "react-icons/md";
 
 import InputText from "../InputText/InputText";
 import InputLabel from "../InputLabel/InputLabel";
@@ -74,13 +75,13 @@ const InputGroup = ({
           size={size}
           border={border}
           alignment={alignment}
-          style={{
+          /*   style={{
             paddingLeft: iconBefore ? "1.5rem" : undefined,
             paddingRight: iconAfter ? "1.5rem" : undefined,
-          }}
+          }} */
         />
 
-        {/* {iconAfter && <span className="icon-after">{iconAfter}</span>} */}
+        {iconAfter && <MdInput />}
       </div>
       {helperText && <InputHelperText />}
 
