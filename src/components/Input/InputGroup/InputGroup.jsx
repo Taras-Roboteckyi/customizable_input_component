@@ -81,7 +81,17 @@ const InputGroup = ({
           }} */
         />
 
-        {iconAfter && <MdInput />}
+        {iconAfter && (
+          <MdInput
+            className={` absolute right-1 top-1/2 transform -translate-y-1/2  ${
+              size === "Small"
+                ? "size-4"
+                : size === "Medium"
+                  ? "size-5"
+                  : "size-6"
+            }`}
+          />
+        )}
       </div>
       {helperText && <InputHelperText />}
 

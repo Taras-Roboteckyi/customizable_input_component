@@ -10,7 +10,7 @@ const InputText = ({ /* value, onChange, */ ...props }) => {
       /* onChange={(e) => e.target.value} */
       placeholder={userText ? " Enter email" : " Text input is limited"}
       /* {...props} */
-      className={`font-sans border-2 rounded-md  p-1.5   ${
+      className={`font-sans border-2 rounded-md  p-1.5 pr-9  ${
         state === "Default"
           ? " border-black"
           : state === "Error"
