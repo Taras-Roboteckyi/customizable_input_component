@@ -8,7 +8,7 @@ const InputText = ({ /* value, onChange, */ ...props }) => {
       type="text"
       /*  value={value} */
       /* onChange={(e) => e.target.value} */
-      placeholder={userText ? " Enter email" : " Text input is limited"}
+      placeholder={userText ? " Input..." : " Text input is limited"}
       /* {...props} */
       className={`font-sans border-2 rounded-md  p-1.5 pr-9  ${
         state === "Default"

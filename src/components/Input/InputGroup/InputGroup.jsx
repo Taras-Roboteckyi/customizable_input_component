@@ -1,7 +1,8 @@
 import React from "react";
 
 import { CiSearch } from "react-icons/ci";
-import { MdInput } from "react-icons/md";
+//import { MdInput } from "react-icons/md";
+import { DiAtom } from "react-icons/di";
 
 import InputText from "../InputText/InputText";
 import InputLabel from "../InputLabel/InputLabel";
@@ -82,7 +83,7 @@ const InputGroup = ({
         />
 
         {iconAfter && (
-          <MdInput
+          <DiAtom
             className={` absolute right-1 top-1/2 transform -translate-y-1/2  ${
               size === "Small"
                 ? "size-4"
