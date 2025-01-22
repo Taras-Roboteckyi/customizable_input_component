@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 const InputText = ({ /* value, onChange, */ ...props }) => {
   const { state, userText, size, border, alignment } = props;
 
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeydown);
+    return () => {
+      window.removeEventListener("keydown", handleKeydown);
+    };
+  }, []);
+
+  const handleKeydown = (event) => {
+    if (event.altKey && event.key === "e") {
+      event.preventDefault(); // Запобігаємо стандартній поведінці
+      inputRef.current.focus();
+    }
+  };
+
   return (
     <input
       type="text"
+      ref={inputRef}
       /*  value={value} */
       /* onChange={(e) => e.target.value} */
       placeholder={userText ? " Input..." : " Text input is limited"}
