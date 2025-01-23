@@ -21,7 +21,7 @@ const InputGroup = ({
   alignment = "Left",
   iconBefore = null,
   iconAfter = null,
-  shortkey = "",
+  shortKey = "",
   userText = false,
 }) => {
   console.log("labelPosition,", labelPosition);
@@ -76,6 +76,7 @@ const InputGroup = ({
           size={size}
           border={border}
           alignment={alignment}
+          shortKey={shortKey}
           /*   style={{
             paddingLeft: iconBefore ? "1.5rem" : undefined,
             paddingRight: iconAfter ? "1.5rem" : undefined,

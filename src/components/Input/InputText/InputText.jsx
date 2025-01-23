@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
 const InputText = ({ /* value, onChange, */ ...props }) => {
-  const { state, userText, size, border, alignment } = props;
+  const { state, userText, size, border, alignment, shortKey } = props;
 
   const inputRef = useRef(null);
 

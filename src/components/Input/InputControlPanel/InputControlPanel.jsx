@@ -22,7 +22,7 @@ const InputControlPanel = () => {
   const [alignment, setAlignment] = useState("Left");
   const [iconAfter, setIconAfter] = useState(null);
   const [iconBefore, setIconBefore] = useState(null);
-  const [shortKey, setShortkey] = useState("");
+  const [shortKey, setShortKey] = useState("");
   const [checkedUserText, setCheckedUserText] = useState(false);
   const [isOpen, setIsOpen] = useState(true); //Випадаюче меню
 
@@ -157,7 +157,7 @@ const InputControlPanel = () => {
               <Checkbox
                 text="Shortkey:"
                 checked={shortKey}
-                onChange={() => setShortkey(!shortKey)}
+                onChange={() => setShortKey(!shortKey)}
               />
             </div>
           </div>
@@ -176,7 +176,7 @@ const InputControlPanel = () => {
           alignment={alignment}
           iconBefore={iconBefore}
           iconAfter={iconAfter}
-          shortkey={shortKey}
+          shortKey={shortKey}
           userText={checkedUserText}
         />
       </div>
