@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 
-const InputText = ({ /* value, onChange, */ ...props }) => {
+const InputText = ({ ...props }) => {
   const { state, userText, size, border, alignment, shortKey } = props;
 
   const inputRef = useRef(null);
@@ -23,10 +23,7 @@ const InputText = ({ /* value, onChange, */ ...props }) => {
     <input
       type="text"
       ref={inputRef}
-      /*  value={value} */
-      /* onChange={(e) => e.target.value} */
       placeholder={userText ? " Input..." : " Text input is limited"}
-      /* {...props} */
       className={`font-sans border-2 rounded-md  p-1.5 pr-9  ${
         state === "Default"
           ? " border-black"
