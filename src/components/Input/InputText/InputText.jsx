@@ -6,14 +6,15 @@ const InputText = ({ ...props }) => {
   const inputRef = useRef(null);
 
   useEffect(() => {
-    window.addEventListener("keydown", handleKeydown);
+    if (shortKey) window.addEventListener("keydown", handleKeydown);
+
     return () => {
       window.removeEventListener("keydown", handleKeydown);
     };
-  }, []);
+  }, []); // Виконувати ефект при зміні пропсів
 
   const handleKeydown = (event) => {
-    if (event.altKey && event.key === "e") {
+    if (shortKey && event.altKey && event.key === "e") {
       event.preventDefault(); // Запобігаємо стандартній поведінці
       inputRef.current.focus();
     }
