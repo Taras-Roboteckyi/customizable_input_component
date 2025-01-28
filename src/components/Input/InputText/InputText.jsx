@@ -5,20 +5,20 @@ const InputText = ({ ...props }) => {
 
   const inputRef = useRef(null);
 
+  const handleKeydown = (event) => {
+    if (shortKey && event.altKey && event.key === "e") {
+      event.preventDefault(); // Запобігаємо стандартній поведінці
+      inputRef.current.focus(); // Фокусуємо інпут
+    }
+  };
+
   useEffect(() => {
     if (shortKey) window.addEventListener("keydown", handleKeydown);
 
     return () => {
       window.removeEventListener("keydown", handleKeydown);
     };
-  }, []); // Виконувати ефект при зміні пропсів
-
-  const handleKeydown = (event) => {
-    if (shortKey && event.altKey && event.key === "e") {
-      event.preventDefault(); // Запобігаємо стандартній поведінці
-      inputRef.current.focus();
-    }
-  };
+  }, [shortKey]); // Виконувати ефект при зміні пропсів
 
   return (
     <input
