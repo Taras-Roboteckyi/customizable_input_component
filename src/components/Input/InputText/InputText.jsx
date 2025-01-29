@@ -6,7 +6,7 @@ const InputText = ({ ...props }) => {
   const inputRef = useRef(null);
 
   const handleKeydown = (event) => {
-    if (shortKey && event.altKey && event.key === "e") {
+    if (userText && shortKey && event.altKey && event.key === "e") {
       event.preventDefault(); // Запобігаємо стандартній поведінці
       inputRef.current.focus(); // Фокусуємо інпут
     }
