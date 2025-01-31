@@ -4,10 +4,6 @@ import { useState } from "react";
 import { BsInfoCircle } from "react-icons/bs";
 
 const InputAnnotation = ({ text, ...props }) => {
-  /* const mouseEnter = () =>
-    (document.getElementById("text").style.display = "inline");
-  const mouseLeave = () =>
-    (document.getElementById("text").style.display = "none"); */
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
   const mouseEnter = () => {
