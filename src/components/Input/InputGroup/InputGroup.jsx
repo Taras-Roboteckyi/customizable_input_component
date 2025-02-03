@@ -77,10 +77,6 @@ const InputGroup = ({
           border={border}
           alignment={alignment}
           shortKey={shortKey}
-          /*   style={{
-            paddingLeft: iconBefore ? "1.5rem" : undefined,
-            paddingRight: iconAfter ? "1.5rem" : undefined,
-          }} */
         />
 
         {iconAfter && (
@@ -96,8 +92,6 @@ const InputGroup = ({
         )}
       </div>
       {helperText && <InputHelperText />}
-
-      {/* {shortkey && <InputAnnotation text={`Shortcut: ${shortkey}`} />} */}
     </div>
   );
 };
