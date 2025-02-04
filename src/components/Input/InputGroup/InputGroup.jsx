@@ -26,12 +26,9 @@ const InputGroup = ({
 }) => {
   console.log("labelPosition,", labelPosition);
   //const labelClass = `input-label ${labelSize}`;
-  //const inputClass = `input-text ${size} ${state} ${alignment}`;
-  //const inputWrapperClass = `input-wrapper ${border ? "border-2 rounded-md border-black" : ""}`;
+
   return (
-    <div
-    /* className={`${inputWrapperClass}  `} */
-    >
+    <div>
       <div
         className={` flex md:mb-1 ${
           labelPosition === "Left"
