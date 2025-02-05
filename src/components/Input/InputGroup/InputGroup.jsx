@@ -1,7 +1,6 @@
 import React from "react";
 
 import { CiSearch } from "react-icons/ci";
-//import { MdInput } from "react-icons/md";
 import { DiAtom } from "react-icons/di";
 
 import InputText from "../InputText/InputText";
@@ -24,9 +23,6 @@ const InputGroup = ({
   shortKey = "",
   userText = false,
 }) => {
-  console.log("labelPosition,", labelPosition);
-  //const labelClass = `input-label ${labelSize}`;
-
   return (
     <div>
       <div

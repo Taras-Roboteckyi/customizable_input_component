@@ -1,6 +1,6 @@
 export const Select = ({ value, onChange, option, text }) => {
   const { first, second, third } = option;
-  /* bg-bg_color */
+
   return (
     <div className=" flex  justify-items-start mb-3">
       <label className="w-40 text-white mr-2 ">{text}:</label>
