@@ -25,7 +25,7 @@ const InputText = ({ ...props }) => {
       type="text"
       ref={inputRef}
       placeholder={userText ? " Input..." : " Text input is limited"}
-      className={`font-sans border-2 rounded-md  p-1.5 pr-9  ${
+      className={`w-full font-sans border-2 rounded-md  p-1.5 pr-9  ${
         state === "Default"
           ? " border-black"
           : state === "Error"
