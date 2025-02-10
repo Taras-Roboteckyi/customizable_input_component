@@ -3,13 +3,6 @@ import InputControlPanel from "./components/Input/InputControlPanel/InputControl
 
 import "./index.css";
 
-//import InputControlPanelStories from "./components/Input/InputControlPanel/InputControlPanel.stories";
-//import InputGroup from "./components/Input/InputGroup/InputGroup";
-
-/* import { Routes, Route, Navigate } from "react-router-dom";
-
-import { ToastContainer } from "react-toastify"; */
-/* import "react-toastify/dist/ReactToastify.css"; */
 /* import { Suspense } from "react";
 
 import PublicRoute from "./components/PublicRoute/PublicRoute";
