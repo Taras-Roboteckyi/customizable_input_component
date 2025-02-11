@@ -3,15 +3,6 @@ import InputControlPanel from "./components/Input/InputControlPanel/InputControl
 
 import "./index.css";
 
-/* import { Suspense } from "react";
-
-import PublicRoute from "./components/PublicRoute/PublicRoute";
-import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import { Layout } from "./components/Layout/Layout";
-import AppLoader from "./components/Loader/Loader";
-
-import { CreateLazyChunk } from "./helpers/CreateLazyChunk"; */
-
 /* const HomePage = CreateLazyChunk("HomePage", "HomePage/HomePage");
 
 const LoginPage = CreateLazyChunk("LoginPage", "LoginPage/LoginPage");
