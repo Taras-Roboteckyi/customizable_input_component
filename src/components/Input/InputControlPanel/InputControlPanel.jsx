@@ -163,7 +163,7 @@ const InputControlPanel = () => {
           </div>
         )}
       </div>
-      <div className="order-last md:content-center md:w-62 ml-5">
+      <div className="order-last ml-0 md:content-center md:w-62 md:ml-5">
         <InputGroup
           label={label}
           labelSize={labelSize}
