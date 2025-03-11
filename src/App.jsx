@@ -3,11 +3,7 @@ import InputControlPanel from "./components/Input/InputControlPanel/InputControl
 
 import "./index.css";
 
-/* const HomePage = CreateLazyChunk("HomePage", "HomePage/HomePage");
-
-const LoginPage = CreateLazyChunk("LoginPage", "LoginPage/LoginPage");
-
-const NewsPage = CreateLazyChunk("NewsPage", "NewsPage/NewsPage");
+/*const NewsPage = CreateLazyChunk("NewsPage", "NewsPage/NewsPage");
 
 const ProfilePage = CreateLazyChunk("ProfilePage", "ProfilePage/ProfilePage"); */
 
