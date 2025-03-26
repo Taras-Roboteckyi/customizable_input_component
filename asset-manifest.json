@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/customizable_input_component/static/css/main.84591035.css",
+    "main.js": "/customizable_input_component/static/js/main.ff24ab17.js",
+    "static/media/background.jpg": "/customizable_input_component/static/media/background.9f1f6984267f674bb83c.jpg",
+    "index.html": "/customizable_input_component/index.html",
+    "main.84591035.css.map": "/customizable_input_component/static/css/main.84591035.css.map",
+    "main.ff24ab17.js.map": "/customizable_input_component/static/js/main.ff24ab17.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84591035.css",
+    "static/js/main.ff24ab17.js"
+  ]
+}
