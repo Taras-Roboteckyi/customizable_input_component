@@ -1,1 +1,0 @@
-const OpenSans = `'Open Sans'`;
